@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4"></h3> 
+            <h3 className="text-xl font-bold mb-4"></h3>
             <p className="opacity-60">Luxe Ready to Wear to tailored perfection for the modern individual.</p>
             <div className="mt-4 space-y-2">
               <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 opacity-60" />
                 <a href="mailto:careers@suitus.store" className="opacity-60 hover:opacity-100 transition-colors">
-                   
+                  
                 </a>
               </div>
             </div>
