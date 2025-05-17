@@ -1,0 +1,258 @@
+import type { Product } from "@/lib/types"
+
+export const menProducts: Product[] = [
+  {
+    id: "mens-suit-1",
+    name: "Classic Black Suit",
+    description:
+      "A timeless black suit crafted from premium Italian wool. Features a modern slim fit with notch lapels and a two-button closure.",
+    price: 19999,
+    images: [
+      "https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1096849/pexels-photo-1096849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Black"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-2",
+    name: "Navy Pinstripe Suit",
+    description:
+      "Elegant navy pinstripe suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 22999,
+    images: [
+      "https://images.pexels.com/photos/1049317/pexels-photo-1049317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Navy"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-3",
+    name: "Gray Windowpane Suit",
+    description:
+      "Sophisticated gray windowpane suit crafted from premium merino wool. Features a modern fit with notch lapels.",
+    price: 21499,
+    images: [
+      "https://images.pexels.com/photos/1138903/pexels-photo-1138903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1143793/pexels-photo-1143793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Gray"],
+    featured: false,
+  },
+  {
+    id: "mens-tuxedo-1",
+    name: "Black Satin Lapel Tuxedo",
+    description: "Luxurious black tuxedo with satin peak lapels. Crafted from fine Italian wool with a tailored fit.",
+    price: 28999,
+    images: [
+      "https://images.pexels.com/photos/1321943/pexels-photo-1321943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1250426/pexels-photo-1250426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Black"],
+    featured: true,
+  },
+  {
+    id: "mens-blazer-1",
+    name: "Cashmere Blend Blazer",
+    description:
+      "Luxurious cashmere blend blazer in a rich burgundy tone. Features a half-canvas construction and horn buttons.",
+    price: 18499,
+    images: [
+      "https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1096849/pexels-photo-1096849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Burgundy"],
+    featured: false,
+  },
+  {
+    id: "mens-shirt-1",
+    name: "White Egyptian Cotton Shirt",
+    description: "Premium white shirt made from Egyptian cotton with mother of pearl buttons and French cuffs.",
+    price: 4599,
+    images: [
+      "https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1337477/pexels-photo-1337477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "men",
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["White"],
+    featured: false,
+  },
+  {
+    id: "mens-shoes-1",
+    name: "Classic Oxford Leather Shoes",
+    description: "Handcrafted Oxford shoes made from premium Italian leather with a polished finish and leather soles.",
+    price: 8999,
+    images: [
+      "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614252369475-531eba7d9bdd?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614252235496-15d605337bef?q=80&w=1000&auto=format&fit=crop",
+    ],
+    category: "men",
+    sizes: ["5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
+    colors: ["Black", "Brown"],
+    featured: true,
+  },
+  {
+    id: "mens-shoes-2",
+    name: "Premium Leather Loafers",
+    description: "Elegant loafers crafted from soft calfskin leather with hand-stitched details and leather soles.",
+    price: 7999,
+    images: [
+      "https://images.unsplash.com/photo-1614252240068-9b90e6c1b690?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614252240544-b4f7b2fc68c7?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1614252240350-338c0d35a3a5?q=80&w=1000&auto=format&fit=crop",
+    ],
+    category: "men",
+    sizes: ["5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
+    colors: ["Black", "Tan"],
+    featured: false,
+  },
+]
+
+export const womenProducts: Product[] = [
+  {
+    id: "womens-suit-1",
+    name: "Tailored Power Suit",
+    description:
+      "Impeccably tailored power suit in charcoal gray. Features a fitted jacket with subtle shoulder padding and straight-leg trousers.",
+    price: 22999,
+    images: [
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "women",
+    sizes: ["32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Charcoal"],
+    featured: true,
+  },
+  {
+    id: "womens-suit-2",
+    name: "Cream Linen Blend Suit",
+    description:
+      "Elegant cream linen blend suit perfect for warm weather. Features a relaxed fit jacket and wide-leg trousers.",
+    price: 19999,
+    images: [
+      "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "women",
+    sizes: ["32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Cream"],
+    featured: true,
+  },
+  {
+    id: "womens-blazer-1",
+    name: "Structured Wool Blazer",
+    description: "Structured wool blazer in deep emerald. Features a single-button closure and subtle peplum detail.",
+    price: 13999,
+    images: [
+      "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "women",
+    sizes: ["32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Emerald"],
+    featured: false,
+  },
+  {
+    id: "womens-dress-1",
+    name: "Silk Midi Dress",
+    description:
+      "Luxurious silk midi dress in a rich burgundy tone. Features a cowl neck and bias cut for an elegant drape.",
+    price: 16999,
+    images: [
+      "https://images.pexels.com/photos/972995/pexels-photo-972995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1755428/pexels-photo-1755428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "women",
+    sizes: ["32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Burgundy"],
+    featured: true,
+  },
+  {
+    id: "womens-blouse-1",
+    name: "Silk Bow Blouse",
+    description: "Elegant silk blouse with a feminine bow detail at the neck. Perfect for office or evening wear.",
+    price: 7999,
+    images: [
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "women",
+    sizes: ["32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Ivory", "Black"],
+    featured: false,
+  },
+  {
+    id: "womens-skirt-1",
+    name: "Wool Pencil Skirt",
+    description: "Classic wool pencil skirt with a high waist and back vent for ease of movement.",
+    price: 5999,
+    images: [
+      "https://images.pexels.com/photos/1755428/pexels-photo-1755428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/972995/pexels-photo-972995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    ],
+    category: "women",
+    sizes: ["32", "34", "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Black", "Navy"],
+    featured: false,
+  },
+  {
+    id: "womens-shoes-1",
+    name: "Leather Pointed Toe Heels",
+    description: "Elegant pointed toe heels crafted from premium leather with a comfortable 3-inch heel height.",
+    price: 6999,
+    images: [
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518049362265-d5b2a6467637?q=80&w=1000&auto=format&fit=crop",
+    ],
+    category: "women",
+    sizes: ["3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8"],
+    colors: ["Black", "Nude"],
+    featured: true,
+  },
+  {
+    id: "womens-shoes-2",
+    name: "Suede Ankle Boots",
+    description: "Luxurious suede ankle boots with a side zipper and stacked heel. Perfect for day to evening wear.",
+    price: 8499,
+    images: [
+      "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?q=80&w=1000&auto=format&fit=crop",
+    ],
+    category: "women",
+    sizes: ["3", "3.5", "4", "4.5", "5", "5.5", "6", "6.5", "7", "7.5", "8"],
+    colors: ["Black", "Brown", "Burgundy"],
+    featured: false,
+  },
+]
+
+export function getProductById(id: string): Product | undefined {
+  return [...menProducts, ...womenProducts].find((product) => product.id === id)
+}

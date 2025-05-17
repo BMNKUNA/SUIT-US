@@ -1,0 +1,505 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+
+    /* South African flag colors */
+    --sa-red: 0 100% 40%;
+    --sa-blue: 210 100% 40%;
+    --sa-green: 120 100% 25%;
+    --sa-yellow: 48 100% 50%;
+    --sa-black: 0 0% 0%;
+    --sa-white: 0 0% 100%;
+
+    /* Custom theme colors */
+    --theme-bg: 0 0% 100%;
+    --theme-text: 240 10% 3.9%;
+    --theme-card: 0 0% 98%;
+    --theme-card-text: 240 10% 3.9%;
+    --theme-border: 240 5.9% 90%;
+    --theme-accent: 240 4.8% 95.9%;
+    --theme-button: 240 5.9% 10%;
+    --theme-button-text: 0 0% 98%;
+    --theme-muted: 240 4.8% 95.9%;
+    --theme-muted-text: 240 3.8% 46.1%;
+  }
+
+  .dark {
+    /* Dark theme colors with complete inversion */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 5.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    /* Custom theme colors */
+    --theme-bg: 240 10% 3.9%;
+    --theme-text: 0 0% 98%;
+    --theme-card: 240 10% 5.9%;
+    --theme-card-text: 0 0% 98%;
+    --theme-border: 240 3.7% 15.9%;
+    --theme-accent: 240 3.7% 15.9%;
+    --theme-button: 0 0% 98%;
+    --theme-button-text: 240 5.9% 10%;
+    --theme-muted: 240 3.7% 15.9%;
+    --theme-muted-text: 240 5% 64.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+/* South African flag accent */
+.sa-flag-accent {
+  position: relative;
+}
+
+.sa-flag-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--sa-red)),
+    hsl(var(--sa-blue)),
+    hsl(var(--sa-green)),
+    hsl(var(--sa-yellow)),
+    hsl(var(--sa-black)),
+    hsl(var(--sa-white))
+  );
+}
+
+/* Theme transition effect */
+.theme-transition {
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease, box-shadow 1s ease;
+}
+
+.theme-transition * {
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease, box-shadow 1s ease;
+}
+
+/* Day/Night theme indicator */
+.day-night-indicator {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.day-night-indicator::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, hsl(210, 100%, 75%) 0% /* Day sky */, hsl(240, 100%, 20%) 100% /* Night sky */);
+  transition: transform 1s ease;
+}
+
+.dark .day-night-indicator::before {
+  transform: translateX(0%);
+}
+
+.light .day-night-indicator::before {
+  transform: translateX(-50%);
+}
+
+/* Luxury text glow effect for hero */
+.luxury-text-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.luxury-text-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: var(--glow-opacity, 0.3);
+  z-index: -1;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.light .luxury-text-glow::before {
+  background: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.2) 20%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+/* Cart button glow effect */
+.cart-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cart-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cart-button:hover::after {
+  opacity: 1;
+}
+
+/* Cart not empty glow effect */
+.cart-not-empty {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+  }
+}
+
+.light .cart-not-empty {
+  animation: pulse-glow-light 2s infinite;
+}
+
+@keyframes pulse-glow-light {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+  }
+}
+
+/* Navigation link animations */
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Primary nav links (MEN, WOMEN) */
+.nav-link-primary:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.light .nav-link-primary:hover {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Secondary nav links (ABOUT, CAREERS, CONTACT) */
+.nav-link-secondary:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.light .nav-link-secondary:hover {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Theme toggle button enhancement */
+.theme-toggle-button {
+  overflow: visible;
+}
+
+.theme-toggle-button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: rotate 4s linear infinite;
+}
+
+.light .theme-toggle-button::before {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.theme-toggle-button:hover::before {
+  opacity: 0.5;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile navigation styles */
+.mobile-nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Luxury hamburger menu */
+.luxury-hamburger {
+  position: relative;
+  overflow: visible;
+}
+
+.luxury-hamburger::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.light .luxury-hamburger::before {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.luxury-hamburger:hover::before {
+  opacity: 1;
+}
+
+/* Product image styling with black background */
+.product-image-container {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.product-image-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.light .product-image-container::before {
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.product-image-container img {
+  mix-blend-mode: luminosity;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+
+.product-image-container:hover img {
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+/* Luxury button styles */
+.luxury-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.luxury-button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.light .luxury-button::before {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.luxury-button:hover::before {
+  top: -50%;
+  left: -50%;
+}
+
+/* Theme-specific container styles */
+.theme-container {
+  @apply bg-background text-foreground border-border;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+}
+
+.theme-card {
+  @apply bg-card text-card-foreground border-border;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+}
+
+.theme-button {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.theme-accent {
+  @apply bg-accent text-accent-foreground;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+/* Light theme specific styles */
+.light {
+  color-scheme: light;
+}
+
+.light .theme-invert {
+  @apply bg-white text-black;
+}
+
+.light .theme-header {
+  @apply bg-white/80 text-black;
+  backdrop-filter: blur(10px);
+}
+
+.light .theme-footer {
+  @apply bg-white text-black;
+}
+
+/* Dark theme specific styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .theme-invert {
+  @apply bg-black text-white;
+}
+
+.dark .theme-header {
+  @apply bg-black/80 text-white;
+  backdrop-filter: blur(10px);
+}
+
+.dark .theme-footer {
+  @apply bg-black text-white;
+}
