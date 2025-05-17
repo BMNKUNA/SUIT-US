@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { ShoppingCart, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useCart } from "@/components/cart-provider"
@@ -15,6 +16,8 @@ export default function Header() {
   const { totalItems } = useCart()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme } = useTheme()
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -24,11 +27,20 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 theme-header">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold tracking-tighter z-50">
-          </Link>
+          {/* Left side - empty or logo if needed */}
+          <div className="w-20">
+            <Link href="/" className="text-2xl font-bold tracking-tighter z-50 sr-only">
+              SUIT US
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Center - Desktop Navigation */}
+          <nav className="hidden md:flex items-center justify-center space-x-12 flex-1">
+            {!isHomePage && (
+              <Link href="/" className="hover:text-current transition-colors font-medium nav-link nav-link-primary">
+                HOME
+              </Link>
+            )}
             <Link href="/mens" className="hover:text-current transition-colors font-medium nav-link nav-link-primary">
               MEN
             </Link>
@@ -55,11 +67,12 @@ export default function Header() {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-4 z-50">
+          {/* Right side - Theme toggle and cart */}
+          <div className="flex items-center gap-4 z-50 w-20 justify-end">
             <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="relative p-2 cart-button">
+                <Button variant="ghost" className="relative p-2 cart-button" aria-label="Shopping cart">
                   <ShoppingCart className={`h-6 w-6 ${totalItems > 0 ? "cart-not-empty" : ""}`} />
                   {totalItems > 0 && (
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -98,6 +111,15 @@ export default function Header() {
             className={`fixed inset-0 z-40 md:hidden pt-20 ${theme === "dark" ? "bg-black/95" : "bg-white/95"}`}
           >
             <nav className="flex flex-col items-center justify-center h-full space-y-8">
+              {!isHomePage && (
+                <Link
+                  href="/"
+                  className="text-2xl font-medium mobile-nav-link"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  HOME
+                </Link>
+              )}
               <Link
                 href="/mens"
                 className="text-2xl font-medium mobile-nav-link"
