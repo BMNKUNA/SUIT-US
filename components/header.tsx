@@ -11,6 +11,7 @@ import Cart from "@/components/cart"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTheme } from "next-themes"
+import { useCartSheet } from "@/components/cart-sheet-context"
 
 export default function Header() {
   const { totalItems } = useCart()
@@ -18,6 +19,7 @@ export default function Header() {
   const { theme } = useTheme()
   const pathname = usePathname()
   const isHomePage = pathname === "/"
+  const { isOpen, openCart, closeCart } = useCartSheet()
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -70,7 +72,7 @@ export default function Header() {
           {/* Right side - Theme toggle and cart */}
           <div className="flex items-center gap-4 z-50 w-20 justify-end">
             <ThemeToggle />
-            <Sheet>
+            <Sheet open={isOpen} onOpenChange={open => (open ? openCart() : closeCart())}>
               <SheetTrigger asChild>
                 <Button variant="ghost" className="relative p-2 cart-button" aria-label="Shopping cart">
                   <ShoppingCart className={`h-6 w-6 ${totalItems > 0 ? "cart-not-empty" : ""}`} />

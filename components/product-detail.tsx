@@ -10,6 +10,7 @@ import { useCart } from "@/components/cart-provider"
 import { formatPrice } from "@/lib/utils"
 import type { Product } from "@/lib/types"
 import { useToast } from "@/hooks/use-toast"
+import { useCartSheet } from "@/components/cart-sheet-context"
 
 export default function ProductDetail({ product }: { product: Product }) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
@@ -19,6 +20,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
   const { addToCart } = useCart()
   const { toast } = useToast()
+  const { openCart } = useCartSheet()
 
   const handleAddToCart = () => {
     addToCart({
@@ -204,6 +206,9 @@ export default function ProductDetail({ product }: { product: Product }) {
         <Button size="lg" className="w-full luxury-button" onClick={handleAddToCart}>
           <ShoppingCart className="mr-2 h-5 w-5" />
           Add to Cart
+        </Button>
+        <Button size="lg" className="w-full mt-2 bg-black text-white luxury-button no-hover-bg" onClick={openCart}>
+          Proceed to Checkout
         </Button>
       </div>
     </div>

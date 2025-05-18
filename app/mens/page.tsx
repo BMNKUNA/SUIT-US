@@ -1,5 +1,6 @@
 import { menProducts } from "@/lib/products"
 import ProductGrid from "@/components/product-grid"
+import WhatsAppContact from "@/components/whatsapp-contact"
 
 export default function MensPage() {
   return (
@@ -11,6 +12,7 @@ export default function MensPage() {
         </div>
 
         <ProductGrid products={menProducts} />
+        <WhatsAppContact />
       </div>
     </main>
   )
