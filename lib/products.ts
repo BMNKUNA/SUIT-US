@@ -1,20 +1,18 @@
-import type { Product } from "@/lib/types"
-
 export const menProducts: Product[] = [
   {
     id: "mens-suit-1",
-    name: "Classic Black Suit",
+    name: "Classic Navy Blue Suit",
     description:
-      "A timeless black suit crafted from premium Italian wool. Features a modern slim fit with notch lapels and a two-button closure.",
-    price: 19999,
+      "A timeless navy suit that comes in black, light green crafted from premium feel fabric. Features a modern slim fit with notch lapels and a two-button closure.",
+    price: 2800,
     images: [
-      "https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1096849/pexels-photo-1096849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "/mens/mens-suits/mens-suit-1-navy-blue.jpeg",
+      "/mens/mens-suits/mens-suit-1-nav-blue-fabric.jpeg",
+      "/mens/mens-suits/mens-suit-1-sage-green.jpeg",
     ],
     category: "men",
     sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
-    colors: ["Black"],
+    colors: ["Black, Navy Blue, Sage Green"],
     featured: true,
   },
   {
@@ -22,7 +20,7 @@ export const menProducts: Product[] = [
     name: "Navy Pinstripe Suit",
     description:
       "Elegant navy pinstripe suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
-    price: 22999,
+    price: 2900,
     images: [
       "https://images.pexels.com/photos/1049317/pexels-photo-1049317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -38,7 +36,7 @@ export const menProducts: Product[] = [
     name: "Gray Windowpane Suit",
     description:
       "Sophisticated gray windowpane suit crafted from premium merino wool. Features a modern fit with notch lapels.",
-    price: 21499,
+    price: 2750,
     images: [
       "https://images.pexels.com/photos/1138903/pexels-photo-1138903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1143793/pexels-photo-1143793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -53,7 +51,7 @@ export const menProducts: Product[] = [
     id: "mens-tuxedo-1",
     name: "Black Satin Lapel Tuxedo",
     description: "Luxurious black tuxedo with satin peak lapels. Crafted from fine Italian wool with a tailored fit.",
-    price: 28999,
+    price: 2950,
     images: [
       "https://images.pexels.com/photos/1321943/pexels-photo-1321943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1250426/pexels-photo-1250426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -69,7 +67,7 @@ export const menProducts: Product[] = [
     name: "Cashmere Blend Blazer",
     description:
       "Luxurious cashmere blend blazer in a rich burgundy tone. Features a half-canvas construction and horn buttons.",
-    price: 18499,
+    price: 1850,
     images: [
       "https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -84,7 +82,7 @@ export const menProducts: Product[] = [
     id: "mens-shirt-1",
     name: "White Egyptian Cotton Shirt",
     description: "Premium white shirt made from Egyptian cotton with mother of pearl buttons and French cuffs.",
-    price: 4599,
+    price: 450,
     images: [
       "https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -99,7 +97,7 @@ export const menProducts: Product[] = [
     id: "mens-shoes-1",
     name: "Classic Oxford Leather Shoes",
     description: "Handcrafted Oxford shoes made from premium Italian leather with a polished finish and leather soles.",
-    price: 8999,
+    price: 900,
     images: [
       "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1614252369475-531eba7d9bdd?q=80&w=1000&auto=format&fit=crop",
@@ -114,7 +112,7 @@ export const menProducts: Product[] = [
     id: "mens-shoes-2",
     name: "Premium Leather Loafers",
     description: "Elegant loafers crafted from soft calfskin leather with hand-stitched details and leather soles.",
-    price: 7999,
+    price: 800,
     images: [
       "https://images.unsplash.com/photo-1614252240068-9b90e6c1b690?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1614252240544-b4f7b2fc68c7?q=80&w=1000&auto=format&fit=crop",
@@ -133,7 +131,7 @@ export const womenProducts: Product[] = [
     name: "Tailored Power Suit",
     description:
       "Impeccably tailored power suit in charcoal gray. Features a fitted jacket with subtle shoulder padding and straight-leg trousers.",
-    price: 22999,
+    price: 2600,
     images: [
       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -149,7 +147,7 @@ export const womenProducts: Product[] = [
     name: "Cream Linen Blend Suit",
     description:
       "Elegant cream linen blend suit perfect for warm weather. Features a relaxed fit jacket and wide-leg trousers.",
-    price: 19999,
+    price: 2500,
     images: [
       "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -164,7 +162,7 @@ export const womenProducts: Product[] = [
     id: "womens-blazer-1",
     name: "Structured Wool Blazer",
     description: "Structured wool blazer in deep emerald. Features a single-button closure and subtle peplum detail.",
-    price: 13999,
+    price: 1400,
     images: [
       "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -180,7 +178,7 @@ export const womenProducts: Product[] = [
     name: "Silk Midi Dress",
     description:
       "Luxurious silk midi dress in a rich burgundy tone. Features a cowl neck and bias cut for an elegant drape.",
-    price: 16999,
+    price: 1700,
     images: [
       "https://images.pexels.com/photos/972995/pexels-photo-972995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1755428/pexels-photo-1755428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -195,7 +193,7 @@ export const womenProducts: Product[] = [
     id: "womens-blouse-1",
     name: "Silk Bow Blouse",
     description: "Elegant silk blouse with a feminine bow detail at the neck. Perfect for office or evening wear.",
-    price: 7999,
+    price: 800,
     images: [
       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -210,7 +208,7 @@ export const womenProducts: Product[] = [
     id: "womens-skirt-1",
     name: "Wool Pencil Skirt",
     description: "Classic wool pencil skirt with a high waist and back vent for ease of movement.",
-    price: 5999,
+    price: 600,
     images: [
       "https://images.pexels.com/photos/1755428/pexels-photo-1755428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/972995/pexels-photo-972995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -225,7 +223,7 @@ export const womenProducts: Product[] = [
     id: "womens-shoes-1",
     name: "Leather Pointed Toe Heels",
     description: "Elegant pointed toe heels crafted from premium leather with a comfortable 3-inch heel height.",
-    price: 6999,
+    price: 700,
     images: [
       "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?q=80&w=1000&auto=format&fit=crop",
@@ -240,7 +238,7 @@ export const womenProducts: Product[] = [
     id: "womens-shoes-2",
     name: "Suede Ankle Boots",
     description: "Luxurious suede ankle boots with a side zipper and stacked heel. Perfect for day to evening wear.",
-    price: 8499,
+    price: 850,
     images: [
       "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop",
@@ -252,6 +250,7 @@ export const womenProducts: Product[] = [
     featured: false,
   },
 ]
+// ... existing code ...
 
 export function getProductById(id: string): Product | undefined {
   return [...menProducts, ...womenProducts].find((product) => product.id === id)
