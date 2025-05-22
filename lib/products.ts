@@ -1,61 +1,81 @@
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  images: string[];
+  category: string;
+  sizes: string[];
+  colors: string[];
+  featured: boolean;
+}
+
 export const menProducts: Product[] = [
   {
-    id: "mens-suit-1",
-    name: "Classic Navy Blue Suit",
+    id: "mens-suit-2-khaki",
+    name: "Khaki Beige Tweed Three Piece Suit",
     description:
-      "A timeless navy suit that comes in black, light green crafted from premium feel fabric. Features a modern slim fit with notch lapels and a two-button closure.",
-    price: 2800,
-    images: [
-      "/mens/mens-suits/mens-suit-1-navy-blue.jpeg",
-      "/mens/mens-suits/mens-suit-1-nav-blue-fabric.jpeg",
-      "/mens/mens-suits/mens-suit-1-sage-green.jpeg",
-    ],
-    category: "men",
-    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
-    colors: ["Black, Navy Blue, Sage Green"],
-    featured: true,
-  },
-  {
-    id: "mens-suit-2",
-    name: "Navy Pinstripe Suit",
-    description:
-      "Elegant navy pinstripe suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+      "Elegant khaki beige tweed suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
     price: 2900,
     images: [
-      "https://images.pexels.com/photos/1049317/pexels-photo-1049317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "/mens/mens-suits/mens-khaki-beige-tweed-3-piece-suit.jpeg",
     ],
     category: "men",
     sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
-    colors: ["Navy"],
+    colors: ["Khaki Beige"],
     featured: true,
   },
   {
-    id: "mens-suit-3",
-    name: "Gray Windowpane Suit",
+    id: "mens-suit-2-grey",
+    name: "Grey Tweed Three Piece Suit",
     description:
-      "Sophisticated gray windowpane suit crafted from premium merino wool. Features a modern fit with notch lapels.",
-    price: 2750,
+      "Elegant grey tweed suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
     images: [
-      "https://images.pexels.com/photos/1138903/pexels-photo-1138903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1143793/pexels-photo-1143793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "/mens/mens-suits/mens-grey-tweed-3-piece-suit.jpeg",
     ],
     category: "men",
     sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
-    colors: ["Gray"],
-    featured: false,
+    colors: ["Grey"],
+    featured: true,
   },
   {
-    id: "mens-tuxedo-1",
-    name: "Black Satin Lapel Tuxedo",
-    description: "Luxurious black tuxedo with satin peak lapels. Crafted from fine Italian wool with a tailored fit.",
-    price: 2950,
+    id: "mens-suit-2-royal-blue",
+    name: "Royal Blue Tweed Three Piece Suit",
+    description:
+      "Elegant royal blue tweed suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
     images: [
-      "https://images.pexels.com/photos/1321943/pexels-photo-1321943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1250426/pexels-photo-1250426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "/mens/mens-suits/mens-royal-blue-tweed-3-piece-suit.jpeg",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Royal Blue"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-2-green",
+    name: "Green Tweed Three Piece Suit",
+    description:
+      "Elegant green tweed suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
+    images: [
+      "/mens/mens-suits/mens-green-tweed-3-piece-suit.jpeg",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Green"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-1-black",
+    name: "Black Tweed Three Piece Suit",
+    description:
+      "A timeless three piece black tweed suit crafted from premium feel fabric. Features a modern slim fit with notch lapels and a one-button closure.",
+    price: 2900,
+    images: [
+      "/mens/mens-suits/mens-black-tweed-3-piece-suit.jpeg",
+      "/mens/mens-suits/mens-black-tweed-3-piece-suit-fabric.jpeg",
     ],
     category: "men",
     sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
@@ -63,65 +83,90 @@ export const menProducts: Product[] = [
     featured: true,
   },
   {
-    id: "mens-blazer-1",
-    name: "Cashmere Blend Blazer",
+    id: "mens-suit-2-chocolate",
+    name: "Chocolate Brown Wool Three Piece Suit",
     description:
-      "Luxurious cashmere blend blazer in a rich burgundy tone. Features a half-canvas construction and horn buttons.",
-    price: 1850,
+      "Elegant chocolate brown wool suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
     images: [
-      "https://images.pexels.com/photos/1342609/pexels-photo-1342609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1096849/pexels-photo-1096849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "/mens/mens-suits/mens-chocolate-brown-premium-wool-3-piece-suit.jpeg",
     ],
     category: "men",
     sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
-    colors: ["Burgundy"],
-    featured: false,
-  },
-  {
-    id: "mens-shirt-1",
-    name: "White Egyptian Cotton Shirt",
-    description: "Premium white shirt made from Egyptian cotton with mother of pearl buttons and French cuffs.",
-    price: 450,
-    images: [
-      "https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1337477/pexels-photo-1337477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    ],
-    category: "men",
-    sizes: ["S", "M", "L", "XL", "2XL"],
-    colors: ["White"],
-    featured: false,
-  },
-  {
-    id: "mens-shoes-1",
-    name: "Classic Oxford Leather Shoes",
-    description: "Handcrafted Oxford shoes made from premium Italian leather with a polished finish and leather soles.",
-    price: 900,
-    images: [
-      "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614252369475-531eba7d9bdd?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614252235496-15d605337bef?q=80&w=1000&auto=format&fit=crop",
-    ],
-    category: "men",
-    sizes: ["5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
-    colors: ["Black", "Brown"],
+    colors: ["Chocolate Brown"],
     featured: true,
   },
   {
-    id: "mens-shoes-2",
-    name: "Premium Leather Loafers",
-    description: "Elegant loafers crafted from soft calfskin leather with hand-stitched details and leather soles.",
-    price: 800,
+    id: "mens-suit-2-burgundy",
+    name: "Burgundy Maroon Wool Three Piece Suit",
+    description:
+      "Elegant burgundy maroon wool suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
     images: [
-      "https://images.unsplash.com/photo-1614252240068-9b90e6c1b690?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614252240544-b4f7b2fc68c7?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614252240350-338c0d35a3a5?q=80&w=1000&auto=format&fit=crop",
+      "/mens/mens-suits/mens-burgandy-maroon-premium-wool-3-piece-suit.jpeg",
     ],
     category: "men",
-    sizes: ["5.5", "6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
-    colors: ["Black", "Tan"],
-    featured: false,
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Burgundy Maroon"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-2-mustard",
+    name: "Mustard Golden Wool Three Piece Suit",
+    description:
+      "Elegant mustard golden wool suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
+    images: [
+      "/mens/mens-suits/mens-mustard-golden-wool-3-piece-suit.jpeg",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Mustard Golden"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-2-beige",
+    name: "Beige Premium Wool Three Piece Suit",
+    description:
+      "Elegant beige wool suit made from super 150s wool. Features a tailored fit with peak lapels and a two-button closure.",
+    price: 2900,
+    images: [
+      "/mens/mens-suits/mens-beige-premium-wool-3-piece-suit.jpeg",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Beige"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-1-navy",
+    name: "Classic Navy Blue Three Piece Suit",
+    description:
+      "A timeless three piece navy suit crafted from premium feel fabric. Features a modern slim fit with notch lapels and a one-button closure.",
+    price: 2800,
+    images: [
+      "/mens/mens-suits/mens-suit-1-navy-blue.jpeg",
+      "/mens/mens-suits/mens-suit-1-nav-blue-fabric.jpeg",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Navy Blue"],
+    featured: true,
+  },
+  {
+    id: "mens-suit-1-sage",
+    name: "Classic Sage Green Three Piece Suit",
+    description:
+      "A timeless three piece sage green suit crafted from premium feel fabric. Features a modern slim fit with notch lapels and a one-button closure.",
+    price: 2800,
+    images: [
+      "/mens/mens-suits/mens-suit-1-sage-green.jpeg",
+      "/mens/mens-suits/mens-suit-1-sage-fabric.jpeg",
+    ],
+    category: "men",
+    sizes: ["44", "46", "48", "50", "52", "54", "56", "58", "60"],
+    colors: ["Sage Green"],
+    featured: true,
   },
 ]
 
@@ -250,7 +295,6 @@ export const womenProducts: Product[] = [
     featured: false,
   },
 ]
-// ... existing code ...
 
 export function getProductById(id: string): Product | undefined {
   return [...menProducts, ...womenProducts].find((product) => product.id === id)

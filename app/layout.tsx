@@ -14,18 +14,18 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://suitus.store"),
   title: {
-    default: "Luxury Suits & Fashion | SUIT US | South Africa",
+    default: "Luxe Suits & Fashion | SUIT US | Online Store",
     template: "%s | SUIT US | South Africa",
   },
   description:
-    "South Africa's premier luxury suit and fashion retailer. Offering high-end ready-to-wear and tailored clothing for men and women across Johannesburg, Cape Town, Durban, and all South African provinces.",
+    "South Africa's premier luxury suit, fashion design and clothing store. Offering high-end ready-to-wear and tailored clothing for men and women across Johannesburg, Cape Town, Durban, and all South African provinces.",
   keywords: [
     "luxury suits",
     "South African fashion",
     "tailored suits",
     "Johannesburg suits",
     "Cape Town fashion",
-    "Durban tailor",
+    "Nelspruit tailor",
     "Pretoria fashion",
     "high-end clothing",
     "men's suits South Africa",
@@ -104,6 +104,7 @@ export default function RootLayout({
   return (
     <html lang="en-ZA" suppressHydrationWarning>
       <head>
+        <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
         <link rel="canonical" href="https://suitus.store" />
         {/* Redirect from suitus.shop to suitus.store */}
         <script
@@ -133,7 +134,7 @@ export default function RootLayout({
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+27-123-456-789",
+                telephone: "+27-67-697-3871",
                 contactType: "customer service",
                 areaServed: "ZA",
                 availableLanguage: ["English"],
