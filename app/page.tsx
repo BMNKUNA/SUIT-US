@@ -292,7 +292,7 @@ export default function Home() {
             <Link href="/mens" className="w-full md:w-auto">
               <Button
                 variant="outline"
-                className="w-full text-lg py-8 border-2 hover:bg-current hover:text-background transition-all duration-300"
+                className="w-full text-lg py-8 border-2 hover:border-current hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-300"
               >
                 MEN'S COLLECTION
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -301,7 +301,7 @@ export default function Home() {
             <Link href="/womens" className="w-full md:w-auto">
               <Button
                 variant="outline"
-                className="w-full text-lg py-8 border-2 hover:bg-current hover:text-background transition-all duration-300"
+                className="w-full text-lg py-8 border-2 hover:border-current hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-300"
               >
                 WOMEN'S COLLECTION
                 <ArrowRight className="ml-2 h-5 w-5" />
