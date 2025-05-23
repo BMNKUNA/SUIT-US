@@ -404,14 +404,11 @@
 }
 
 .product-image-container img {
-  mix-blend-mode: luminosity;
-  opacity: 0.9;
   transition: all 0.5s ease;
 }
 
 .product-image-container:hover img {
-  opacity: 1;
-  mix-blend-mode: normal;
+  transform: scale(1.05);
 }
 
 /* Luxury button styles */

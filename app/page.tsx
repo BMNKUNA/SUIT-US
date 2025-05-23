@@ -58,7 +58,7 @@ export default function Home() {
     if (!canvas) return
 
     const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    if (!ctx) return;
 
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -252,16 +252,23 @@ export default function Home() {
                   T
                 </span>
               </span>
-              <span className="inline-block mx-4 overflow-hidden">
+              <span className="inline-block overflow-hidden">
                 <span
                   className={`inline-block transition-transform duration-700 delay-200 ${isHovering ? "transform -translate-y-2" : ""}`}
+                >
+                  &nbsp;
+                </span>
+              </span>
+              <span className="inline-block overflow-hidden">
+                <span
+                  className={`inline-block transition-transform duration-700 delay-250 ${isHovering ? "transform -translate-y-2" : ""}`}
                 >
                   U
                 </span>
               </span>
               <span className="inline-block overflow-hidden">
                 <span
-                  className={`inline-block transition-transform duration-700 delay-250 ${isHovering ? "transform -translate-y-2" : ""}`}
+                  className={`inline-block transition-transform duration-700 delay-300 ${isHovering ? "transform -translate-y-2" : ""}`}
                 >
                   S
                 </span>

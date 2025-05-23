@@ -1,8 +1,18 @@
+"use client"
+
+import { useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import { menProducts } from "@/lib/products"
 import ProductGrid from "@/components/product-grid"
 import WhatsAppContact from "@/components/whatsapp-contact"
 
 export default function MensPage() {
+  const { setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme('light');
+  }, [setTheme]);
+
   return (
     <main className="min-h-screen pt-24 pb-16 theme-invert">
       <div className="container mx-auto px-4">

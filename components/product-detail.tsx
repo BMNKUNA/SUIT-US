@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,6 +11,7 @@ import { formatPrice } from "@/lib/utils"
 import type { Product } from "@/lib/types"
 import { useToast } from "@/hooks/use-toast"
 import { useCartSheet } from "@/components/cart-sheet-context"
+import { useTheme } from "next-themes"
 
 export default function ProductDetail({ product }: { product: Product }) {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0])
@@ -21,6 +22,12 @@ export default function ProductDetail({ product }: { product: Product }) {
   const { addToCart } = useCart()
   const { toast } = useToast()
   const { openCart } = useCartSheet()
+  const { setTheme } = useTheme()
+
+  // Set theme to light when component mounts
+  useEffect(() => {
+    setTheme('light');
+  }, [setTheme]); // Include setTheme in the dependency array
 
   const handleAddToCart = () => {
     addToCart({
